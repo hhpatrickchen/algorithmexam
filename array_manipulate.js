@@ -33,3 +33,27 @@ function processData(input) {
 
 } 
  processData(input);
+
+
+//left rotation
+//5 4
+//1 2 3 4 5
+function leftRotation(a, d) {
+
+    var n = a.length ;
+    
+    while(d > 0){
+
+        a.push(a[0]);
+        a.shift();
+        d--;
+    }
+
+    return a;
+}
+
+var a = [1,2,3,4,5], d = 4;
+
+var b = leftRotation(a, d );
+
+console.log(b.join(" "));
